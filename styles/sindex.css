@@ -1,0 +1,684 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* STYLE UNTUK HALAMAN BERANDA */
+.container {
+    font-family: sans-serif;
+}
+
+.menu {
+    width: 100%;
+    height: 55px;
+    background-color: #2a2e34;
+}
+
+.menu .menukiri {
+    float: left;
+    width: 65%;
+}
+
+.menu .menukiri .namawebsite {
+    color: salmon;
+    font-size: 25px;
+    margin-left: 25%;
+    margin-top: 1.7%;
+}
+
+.menu .menukanan {
+    float: left;
+    width: 35%;
+}
+
+.menu .menukanan ul li {
+    display: inline-block;
+    margin-top: 4%;
+    margin-left: 7%;
+    font-size: 18px;
+}
+
+.menu .menukanan a {
+    text-decoration: none;
+    color: #fff;
+    opacity: 75%;
+    padding-bottom: 5px;
+    transition: 0.25s ease 0s;
+}
+
+.menu .menukanan a:hover {
+    border-bottom: 1px solid lightskyblue;
+    color: lightskyblue;
+}
+
+.menu .menukanan .menuUtama {
+    color: salmon;
+    opacity: 50%;
+}
+
+.isikiri {
+    float: left;
+    height: 91vh;
+    width: 50%;
+}
+
+.isikiri .logo {
+    margin-left: 30%;
+    margin-top: 25%;
+}
+
+.isikanan {
+    float: left;
+    height: 91vh;
+    width: 48%;
+}
+
+.isikanan .katakatamutiara {
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.isikanan .animationTyping {
+    width: 26.8ch;
+    margin-top: 35%;
+    font-size: 40px;
+    padding-bottom: 1%;
+    letter-spacing: 1px;
+    color: salmon;
+    animation: tote 2s steps(45), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+}
+
+@keyframes tote {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* STYLE UNTUK HALAMAN ARTIKEL */
+.isi-artikel {
+    height: min-content;
+    width: max-content;
+    display: flex;
+    padding: 1%;
+}
+
+.isi-artikel ul {
+    width: 550px;
+    height: 310px;
+    margin-right: 1%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: salmon;
+}
+
+.halaman-artikel::-webkit-scrollbar {
+    width: 0;
+    height: 6px;
+}
+
+.halaman-artikel::-webkit-scrollbar-thumb {
+    background-color: salmon;
+    border-radius: 10px;
+}
+
+.tombolView {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    font-weight: bold;
+    border: 0;
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+.tombolView:hover {
+    color: salmon;
+}
+
+.clear {
+    clear: both;
+}
+
+.overlay-populer {
+    position: fixed;
+    overflow: hidden;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	text-align: center;
+	background: rgba(0, 0, 0, 0);
+	transition: 0.30s;
+}
+
+.overlay-populer:target {
+    width: auto;
+	height: auto;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+
+.back-overlay-artikel {
+    text-decoration: none;
+    color: salmon;
+    font-size: 18px;
+    transition: 0.25s;
+}
+
+.back-overlay-artikel:hover {
+    color: #81d4f4;
+}
+
+.btn-tambah-artikel {
+    margin-top: 1.5%;
+    margin-right: 5%;
+    color: #fff;
+    opacity: 75%;
+    float: right;
+    padding: 7px;
+    background-color: salmon;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-tambah-artikel:hover {
+    background-color: #81d4f4;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+/* STYLE UNTUK HALAMAN LOG IN */
+.container-login {
+    background-color: #2a2e34;
+    width: 450px;
+    height: 290px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    border-radius: 10px;
+}
+
+.container-login .h1-login {
+    color: salmon;
+    opacity: 50%;
+    font-size: 40px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.container-login .formlogin-login input {
+    text-align: center;
+    margin-top: 2.5%;
+}
+
+.container-login .formlogin-login input[type = text] {
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    border: 1px solid salmon;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+    opacity: 75%;
+    transition: 0.25s;
+}
+
+.container-login .formlogin-login input[type = text]:hover {
+    border-color: #81d4f4;
+    width: 225px;
+}
+
+.container-login .formlogin-login input[type = password] {
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    opacity: 75%;
+    border: 1px solid salmon;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+.container-login .formlogin-login input[type = password]:hover {
+    border-color: #81d4f4;
+    width: 225px;
+}
+
+.container-login .formlogin-login input[type = submit] {
+    width: 100px;
+    outline: none;
+    border-radius: 5px;
+    color: #2a2e34;
+    padding: 5px;
+    margin-top: 3%;
+    font-size: 14px;
+    border: 0;
+    background-color: salmon;
+    cursor: pointer;
+    opacity: 75%;
+    transition: 0.25s;
+}
+
+.container-login .formlogin-login input[type = submit]:hover {
+    background-color: #81d4f4;
+}
+
+.container-login .back-login {
+    text-decoration: none;
+    color: #fff;
+    opacity: 50%;
+    transition: 0.25s;
+    font-size: 14px;
+}
+
+.container-login .back-login:hover {
+    color: #81d4f4;
+}
+
+.container-login .btn-buat-akun {
+    text-decoration: none;
+    margin-left: 24%;
+    font-size: 13px;
+    color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CREATE ACCOUNT */
+.container-buat-akun {
+    background-color: #2a2e34;
+    width: 550px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    border-radius: 10px;
+}
+
+.container-buat-akun h1 {
+    color: salmon;
+    opacity: 50%;
+    font-size: 40px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.container-buat-akun .back-login {
+    text-decoration: none;
+    color: #fff;
+    opacity: 50%;
+    transition: 0.25s;
+    font-size: 14px;
+}
+
+.container-buat-akun .back-login:hover {
+    color: #81d4f4;
+}
+
+.container-buat-akun #form-buat-akun input {
+    text-align: center;
+    margin-top: 2.5%;
+}
+
+.container-buat-akun #form-buat-akun input[type = text] {
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    border: 1px solid salmon;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+    opacity: 75%;
+    transition: 0.25s;
+}
+
+.container-buat-akun #form-buat-akun input[type = text]:hover {
+    border-color: #81d4f4;
+    width: 225px;
+}
+
+.container-buat-akun #form-buat-akun input[type = password] {
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    border: 1px solid salmon;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+    opacity: 75%;
+    transition: 0.25s;
+}
+
+.container-buat-akun #form-buat-akun input[type = password]:hover {
+    border-color: #81d4f4;
+    width: 225px;
+}
+
+.container-buat-akun #form-buat-akun input[type = submit] {
+    width: 100px;
+    outline: none;
+    border-radius: 5px;
+    color: #2a2e34;
+    padding: 5px;
+    margin-top: 6%;
+    font-size: 14px;
+    border: 0;
+    background-color: salmon;
+    cursor: pointer;
+    opacity: 75%;
+    transition: 0.25s;
+}
+
+.container-buat-akun #form-buat-akun input[type = submit]:hover {
+    background-color: #81d4f4;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* STYLE PROFILE */
+.container-profile {
+    font-family: sans-serif;
+}
+
+.container-profile .halaman-profile {
+    color: #fff;
+}
+
+.container-profile #btn-tampilkan-profile {
+    background-color: salmon;
+    outline: none;
+    color: #fff;
+    border: 0;
+    opacity: 75%;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 16px;
+    transition: 0.25s;
+    margin-top: 2%;
+}
+
+.container-profile #btn-tampilkan-profile:hover {
+    background-color: #81d4f4;
+    color: #000;
+}
+
+.container-profile .halaman-profile .kiri {
+    float: left;
+    width: 50%;
+    margin-top: 5%;
+}
+
+#halamanEdit {
+    color: #fff;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: max-content;
+    transform: translate(-50%, -55%);
+}
+
+#halamanEdit input[type = text], #halamanEdit input[type = password] {
+    outline: none;
+    background: none;
+    border: 1px solid salmon;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #fff;
+    opacity: 75%;
+}
+
+#halamanEdit input[type = text]:hover {
+    border-color: #81d4f4;
+}
+
+#halamanEdit input[type = password]:hover {
+    border-color: #81d4f4;
+}
+
+#halaman#edit input[type = text]::placeholder {
+    color: salmon;
+}
+
+.kum-btn button, .kum-btn input[type = submit] {
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: salmon;
+    opacity: 75%;
+    letter-spacing: 1px;
+    color: #fff;
+    transition: 0.25s;
+}
+
+.kum-btn button:hover {
+    color: #000;
+    background-color: #81d4f4;
+}
+
+.kum-btn input[type = submit]:hover {
+    color: #000;
+    background-color: #81d4f4;
+}
+
+.container-profile .halaman-profile .kiri h1 {
+    font-size: 19px;
+    font-weight: normal;
+    margin-left: 15%;
+}
+
+.container-profile .halaman-profile .kanan {
+    float: left;
+    width: 50%;
+    height: 82.5vh;
+}
+
+.container-profile .halaman-profile .kanan img {
+    margin-left: 30%;
+    margin-top: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* STYLE UNTUK INPUT NEW ARTIKEL */
+.isiInputan {
+    width: 1000px;
+    height: 500px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    border-top: 2px solid salmon;
+    border-bottom: 2px solid salmon;
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+}
+
+
+.inputan {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+#forminput input[type = text] {
+    outline: none;
+    background: none;
+    border: 0;
+    width: 131vh;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border-bottom: 1px solid salmon;
+    color: grey;
+}
+
+#forminput input[type = text]::placeholder {
+    color: salmon;
+}
+
+#forminput ul li {
+    display: inline-block;
+}
+
+.textarea-artikel {
+    resize: none;
+    width: 99%;
+    border: 1px solid #fff;
+    outline: none;
+    height: 47vh;
+    border-radius: 10px;
+    color: grey;
+    background: none;
+    font-family: sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+#forminput input[type = submit] {
+    float: right;
+    margin-right: 2%;
+    background-color: salmon;
+    color: #fff;
+    padding: 5px;
+    outline: none;
+    border: 0;
+    width: 80px;
+    opacity: 75%;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
+#forminput input[type = submit]:hover {
+    background-color: #81d4f4;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* STYLE UNTUK VIEW ARTIKEL */
+.isi-view-artikel {
+    color: #fff;
+    text-align: left;
+    display: none;
+    padding-bottom: 7%;
+}
+
+
+
+
+
+
+
+
+
+
+/* STYLE UNTUK EDIT ARTIKEL */
+.isiEdit {
+    width: 1000px;
+    height: 500px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 15%;
+    border-top: 2px solid salmon;
+    border-bottom: 2px solid salmon;
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+}
