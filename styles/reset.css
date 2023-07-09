@@ -45,4 +45,15 @@ table {
 
 body {
     line-height: 1;
+    overflow-y: auto;
+    padding-right: 3px;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: salmon;
+    border-radius: 10px;
 }

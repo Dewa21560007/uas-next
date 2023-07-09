@@ -227,6 +227,19 @@ body {
     color: #000;
 }
 
+.inputSearch {
+    outline: none;
+    border: 1px solid salmon;
+    border-radius: 5px;
+    padding: 5px;
+    width: 550px;
+    margin-top: 2%;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: salmon;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 
 
 

@@ -28,8 +28,6 @@ export default function Beranda() {
   const [materi, setMateri] =  useState(null);
   const [materipopuler, setMateriPopuler] = useState(null);
 
-  const [value, setValue] =  useState('');
-
   const klikSaya = (event) => {
     event.preventDefault();
     var id = event.target.value;
@@ -180,10 +178,6 @@ export default function Beranda() {
     }
   }
 
-  const bahanPercobaan = (event) => {
-    setValue(event.target.value);
-  }
-
 if(materipopuler==null){
   return(
     <div>
@@ -209,33 +203,7 @@ if(materipopuler==null){
           </ul>
         </div>
       </nav>
-      <center>
-        <input type="text" className="inputSearch" placeholder="Search Artikel Disini..." onChange={bahanPercobaan} />
-      </center>
       <button onClick={addData} className="btn-tambah-artikel">Buat Artikel</button>
-      <h1 style={{color: "#fff", marginTop: "3%", marginLeft: "2%", fontWeight: "bold", opacity: "75%", fontSize: "18px", letterSpacing: "1px"}}>Pencarian</h1>
-      <div className="halaman-artikel" id="halaman" style={{overflowX: "auto", marginLeft: "1%", marginRight: "1%", opacity: "75%"}}>
-        <div className="isi-artikel" id="isi">
-            {materi.filter(dta => {
-              const searchTemp = value.toLowerCase();
-              const judul = dta.judul.toLowerCase();
-
-              return searchTemp && judul.startsWith(searchTemp);
-            }).map((dta) => 
-              <ul style={{display: "inline-block"}}>
-                <li style={{color: "#000", opacity: "50%", fontWeight: "bold", fontSize: "18px", marginBottom: "5%"}}>{dta.judul}</li>
-                <li style={{float: "left", marginRight: "5%"}}><img src={dta.cover} width={100} height={100} /></li>
-                <li style={{fontSize: "17px", letterSpacing: "1px", width: "100%", height: "70%"}}>{dta.deskripsi}</li>
-                <li style={{float: "left", marginTop: "4%", marginRight: "2%"}}>
-                  <Image src={Logo} width={25} height={25} />
-                </li>
-                <li style={{float: "left", marginTop: "5%"}}>{dta.suka}</li>
-                <li style={{float: "right", marginRight: "3%", marginTop: "2%"}}><button className="tombolView" value={dta.id} onClick={btnView}>View Artikel</button></li>
-                <li style={{float: "right", marginRight: "3%", marginTop: "2%"}}><button value={dta.id} className="tombolView" onClick={klikSaya}>Lihat Foto</button></li>
-              </ul>
-            )}
-        </div>
-      </div>
       <h1 style={{color: "#fff", marginTop: "3%", marginLeft: "2%", fontWeight: "bold", opacity: "75%", fontSize: "18px", letterSpacing: "1px"}}>Semua Artikel</h1>
       <div className="halaman-artikel" id="halaman" style={{overflowX: "auto", marginLeft: "1%", marginRight: "1%", opacity: "75%"}}>
         <div className="isi-artikel" id="isi">
